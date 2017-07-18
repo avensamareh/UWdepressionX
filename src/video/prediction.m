@@ -20,7 +20,7 @@ opts.numSplits= 5;
 opts.verbose= true;
 opts.classifierID= 2; % weak learners to use. Can be an array for mix of weak learners too
 model = forestTrain(video_train, y_trainScore, opts);
-yhat = forestTest(model, video_train);
+yhat = forestTest(model, video_dev);
 
 fprintf('Classifier distributions:\n');
 classifierDist= zeros(1, 4);
